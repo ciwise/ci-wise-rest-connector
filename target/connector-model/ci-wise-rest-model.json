@@ -18,8 +18,8 @@
       "isBatch": false,
       "samples": [],
       "javaReturnType": {
-        "javaTypeName": "",
-        "fullQualifiedJavaTypeName": "void",
+        "javaTypeName": "String",
+        "fullQualifiedJavaTypeName": "java.lang.String",
         "isOptional": false,
         "isRefOnly": false,
         "isPayload": false,
@@ -27,14 +27,30 @@
         "isEnum": false,
         "isString": false,
         "isHttpCallback": false,
-        "description": ""
+        "description": "A greeting message"
       },
-      "parameters": [],
+      "parameters": [
+        {
+          "javaTypeName": "String",
+          "fullQualifiedJavaTypeName": "java.lang.String",
+          "isOptional": false,
+          "isRefOnly": false,
+          "isPayload": false,
+          "isComplexType": false,
+          "isEnum": false,
+          "isString": true,
+          "typeMirror": "java.lang.String",
+          "isHttpCallback": false,
+          "isArrayOrListOrMap": false,
+          "javaName": "friend",
+          "description": "Name to be used to generate a greeting message."
+        }
+      ],
       "apiDocUrl": "",
-      "javaName": "foo",
-      "friendlyName": "Foo",
-      "description": "Dummy operation to avoid compilation issues since @Connector need at least one @Processor, @Transformer or @Source",
-      "xsdName": "foo"
+      "javaName": "greet",
+      "friendlyName": "Greet",
+      "description": "Custom processor",
+      "xsdName": "greet"
     }
   ],
   "filters": [],

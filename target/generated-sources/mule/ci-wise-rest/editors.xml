@@ -21,12 +21,16 @@
       <group id="ci-wise-restConnectorGeneric" caption="Basic Settings">
         <modeSwitch alwaysCombo="true" name="Ci-wise-rest operations to execute" caption="Operation" description="Operation.">
           <no-operation abstractElement="http://www.mulesoft.org/schema/mule/ci-wise-rest/abstractCi-wise-restConnectorGeneric" versions="[3.5.0,8.0.0]" connector-name="processor"></no-operation>
-          <mode modeId="http://www.mulesoft.org/schema/mule/ci-wise-rest/foo" modeLabel="Foo"></mode>
+          <mode modeId="http://www.mulesoft.org/schema/mule/ci-wise-rest/greet" modeLabel="Greet"></mode>
         </modeSwitch>
       </group>
     </attribute-category>
   </cloud-connector>
-  <cloud-connector returnType="void" caption="Foo" icon="icons/small/ci-wise-rest-connector-24x16.png" localId="foo" image="icons/large/ci-wise-rest-connector-48x32.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/ci-wise-rest/abstractCi-wise-restConnectorGeneric" metaData="static">
-    <attribute-category caption="General" description="General."></attribute-category>
+  <cloud-connector returnType="java.lang.String" caption="Greet" icon="icons/small/ci-wise-rest-connector-24x16.png" localId="greet" image="icons/large/ci-wise-rest-connector-48x32.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/ci-wise-rest/abstractCi-wise-restConnectorGeneric" metaData="static">
+    <attribute-category caption="General" description="General.">
+      <group id="general" caption="General">
+        <string name="friend" caption="Friend" description="Name to be used to generate a greeting message." required="true" javaType="java.lang.String"></string>
+      </group>
+    </attribute-category>
   </cloud-connector>
 </namespace>

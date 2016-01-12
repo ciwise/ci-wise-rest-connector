@@ -14,7 +14,7 @@ import org.springframework.beans.factory.xml.NamespaceHandlerSupport;
  * 
  */
 @SuppressWarnings("all")
-@Generated(value = "Mule DevKit Version 3.8.0", date = "2016-01-10T12:43:11-05:00", comments = "Build UNNAMED.2762.e3b1307")
+@Generated(value = "Mule DevKit Version 3.8.0", date = "2016-01-11T11:15:52-05:00", comments = "Build UNNAMED.2762.e3b1307")
 public class CiWiseRestNamespaceHandler
     extends NamespaceHandlerSupport
 {
@@ -44,9 +44,9 @@ public class CiWiseRestNamespaceHandler
             handleException("config", "@Config", ex);
         }
         try {
-            this.registerBeanDefinitionParser("foo", new FooDefinitionParser());
+            this.registerBeanDefinitionParser("greet", new GreetDefinitionParser());
         } catch (NoClassDefFoundError ex) {
-            handleException("foo", "@Processor", ex);
+            handleException("greet", "@Processor", ex);
         }
     }
 

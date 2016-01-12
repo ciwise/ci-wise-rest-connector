@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xs:schema xmlns:ns2="http://www.mulesoft.org/schema/mule/devkit" xmlns:mule="http://www.mulesoft.org/schema/mule/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.mulesoft.org/schema/mule/ci-wise-rest" attributeFormDefault="unqualified" elementFormDefault="qualified">
+<xs:schema xmlns:mule="http://www.mulesoft.org/schema/mule/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://www.mulesoft.org/schema/mule/devkit" targetNamespace="http://www.mulesoft.org/schema/mule/ci-wise-rest" attributeFormDefault="unqualified" elementFormDefault="qualified">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"></xs:import>
   <xs:import namespace="http://www.springframework.org/schema/beans" schemaLocation="http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"></xs:import>
   <xs:import namespace="http://www.mulesoft.org/schema/mule/core" schemaLocation="http://www.mulesoft.org/schema/mule/core/current/mule.xsd"></xs:import>
@@ -20,17 +20,22 @@
       </xs:complexContent>
     </xs:complexType>
   </xs:element>
-  <xs:element xmlns="http://www.mulesoft.org/schema/mule/ci-wise-rest" xmlns:mule="http://www.mulesoft.org/schema/mule/core" type="FooType" substitutionGroup="mule:abstract-message-processor" name="foo">
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/ci-wise-rest" xmlns:mule="http://www.mulesoft.org/schema/mule/core" type="GreetType" substitutionGroup="mule:abstract-message-processor" name="greet">
     <xs:annotation>
-      <xs:documentation>Dummy operation to avoid compilation issues since @Connector need at least one @Processor, @Transformer or @Source</xs:documentation>
+      <xs:documentation>Custom processor</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:complexType name="FooType">
+  <xs:complexType name="GreetType">
     <xs:complexContent>
       <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
         <xs:attribute type="xs:string" use="required" name="config-ref">
           <xs:annotation>
             <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute type="xs:string" use="required" name="friend">
+          <xs:annotation>
+            <xs:documentation>Name to be used to generate a greeting message.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
