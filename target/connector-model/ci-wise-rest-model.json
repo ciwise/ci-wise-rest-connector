@@ -1,0 +1,46 @@
+{
+  "minMuleVersion": "3.5.0",
+  "requiresEntitlement": false,
+  "requiresEnterpriseLicense": false,
+  "configs": [
+    {
+      "configElementName": "config",
+      "attributes": [],
+      "javaName": "ConnectorConfig",
+      "friendlyName": "Configuration",
+      "type": "ConfigurationConfig"
+    }
+  ],
+  "attributes": [],
+  "processors": [
+    {
+      "isPaged": false,
+      "isBatch": false,
+      "samples": [],
+      "javaReturnType": {
+        "javaTypeName": "",
+        "fullQualifiedJavaTypeName": "void",
+        "isOptional": false,
+        "isRefOnly": false,
+        "isPayload": false,
+        "isComplexType": false,
+        "isEnum": false,
+        "isString": false,
+        "isHttpCallback": false,
+        "description": ""
+      },
+      "parameters": [],
+      "apiDocUrl": "",
+      "javaName": "foo",
+      "friendlyName": "Foo",
+      "description": "Dummy operation to avoid compilation issues since @Connector need at least one @Processor, @Transformer or @Source",
+      "xsdName": "foo"
+    }
+  ],
+  "filters": [],
+  "transformers": [],
+  "sources": [],
+  "javaName": "CIWiseRESTConnector",
+  "friendlyName": "CIWiseREST",
+  "xsdName": "ci-wise-rest"
+}
